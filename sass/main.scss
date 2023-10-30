@@ -1,0 +1,65 @@
+$primary: #4158d0;
+$secondary: #de7278;
+$success: #c6caed;
+$warning: #f9c339;
+
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+3:wght@400;600&display=swap');
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+:root {
+    --bs-body-font-family: 'Anonymous Pro', monospace;
+    margin: 0;
+    padding: 0;
+}
+
+.app-gradient-bg {
+    background-color: #4158d0;
+    background: linear-gradient(
+        350deg,
+        #4158d0 0%,
+        #de7278 39%,
+        #f9c339 84%,
+        #f9c339 100%
+    );
+    min-height: 100vh; /* This ensures the gradient covers the entire viewport height */
+}
+
+.nav-bar {
+    @include font-size(1.25rem);
+    padding: 0.5rem 2rem;
+    width: fit-content;
+    background-color: #f9c339;
+}
+
+.active-nav {
+    color: #de7278;
+    font-weight: 800;
+}
+.section-title {
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: #eff1f3;
+    padding-top: 3rem;
+}
+
+.intro-container {
+    width: 100vw;
+    font-family: 'Source Sans 3', sans-serif;
+    color: #eff1f3;
+    padding: 10rem 0 5rem 0;
+}
+
+.intro-container h1 {
+    font-weight: 600;
+    @include font-size(22vw);
+    line-height: 1.1;
+    margin-bottom: -3.75rem;
+}
+
+.intro-container h3 {
+    font-weight: 400;
+    @include font-size(5vw);
+    cursor: default;
+    hyphens: auto;
+    line-height: 1.3;
+}

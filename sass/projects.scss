@@ -1,0 +1,34 @@
+.project {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: auto;
+}
+
+.project-container {
+    display: flex; /* Use flex layout for the project container */
+    align-items: flex-start;
+    margin: 0.5rem;
+}
+
+.image-wrapper {
+    flex: 0 0 auto;
+    margin: 0.5rem;
+}
+
+.project-title {
+    min-width: 20rem;
+}
+
+/* Limit the height of images */
+.image-wrapper img {
+    max-height: 500px; /* Adjust the height as needed */
+}
+
+.description-wrapper {
+    flex: 1; /* Allow the description to take up the remaining space */
+    padding-left: 0.5rem;
+    padding-bottom: 1rem;
+    margin-left: 0.2rem; /* Add spacing between the image and description */
+    min-width: 20rem;
+    border-left: 2px solid #eff1f3;
+}
