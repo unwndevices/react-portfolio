@@ -1,5 +1,5 @@
 import '../css/projects.min.css'
-import { Container } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
 import { useRef, useEffect } from 'react'
 
 import PropTypes from 'prop-types'
@@ -69,11 +69,11 @@ function useHorizontalScroll() {
 
 export const Projects = () => {
     return (
-        <Container>
+        <>
             {projects.map((project, index) => (
                 <ProjectComponent key={index} project={project} />
             ))}
-        </Container>
+        </>
     )
 }
 
@@ -81,34 +81,36 @@ const ProjectComponent = ({ project }) => {
     const scrollRef = useHorizontalScroll()
 
     return (
-        <div className="project" ref={scrollRef}>
-            <div>
+        <Row className="project">
+            <Col className="col-sm-2">
                 <h3 className="project-title">{project.title}</h3>
                 <p className="project-year">{project.year}</p>
-            </div>
-            {project.images.map((image, imageIndex) => (
-                <div key={imageIndex} className="project-container">
-                    <div className="image-wrapper">
-                        {image.link ? (
-                            <a
-                                href={image.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
+            </Col>
+            <Col className="col-sm-10 content-wrapper" ref={scrollRef}>
+                <div className="d-flex flex-nowrap">
+                    {project.images.map((image, imageIndex) => (
+                        <div key={imageIndex} className="image-wrapper">
+                            {image.link ? (
+                                <a
+                                    href={image.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <img src={image.src} alt={image.alt} />
+                                </a>
+                            ) : (
                                 <img src={image.src} alt={image.alt} />
-                            </a>
-                        ) : (
-                            <img src={image.src} alt={image.alt} />
-                        )}
-                    </div>
-                    {image.description && (
-                        <div className="description-wrapper">
-                            {image.description}
+                            )}
+                            {image.description && (
+                                <div className="description-wrapper">
+                                    {image.description}
+                                </div>
+                            )}
                         </div>
-                    )}
+                    ))}
                 </div>
-            ))}
-        </div>
+            </Col>
+        </Row>
     )
 }
 

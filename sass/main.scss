@@ -22,10 +22,11 @@ $warning: #f9c339;
         #f9c339 100%
     );
     min-height: 100vh; /* This ensures the gradient covers the entire viewport height */
+    min-width: 100vw; /* This ensures the gradient covers the entire viewport width */
 }
 
 .nav-bar {
-    @include font-size(1.25rem);
+    //@include font-size(2rem);
     padding: 0.5rem 2rem;
     width: fit-content;
     background-color: #f9c339;
@@ -51,15 +52,25 @@ $warning: #f9c339;
 
 .intro-container h1 {
     font-weight: 600;
-    @include font-size(22vw);
+    font-size: 55vw;
     line-height: 1.1;
     margin-bottom: -3.75rem;
 }
 
 .intro-container h3 {
     font-weight: 400;
-    @include font-size(5vw);
+    font-size: 10vw;
     cursor: default;
     hyphens: auto;
     line-height: 1.3;
+}
+
+@media (min-width: 768px) {
+    .intro-container h1 {
+        font-size: 22vw;
+    }
+
+    .intro-container h3 {
+        font-size: 5vw;
+    }
 }

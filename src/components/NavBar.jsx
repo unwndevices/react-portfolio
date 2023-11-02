@@ -3,11 +3,11 @@ import { Link, animateScroll as scroll } from 'react-scroll'
 
 export const NavBar = () => {
     return (
-        <Navbar className="m-lg-4 nav-bar" fixed="top">
+        <Navbar className="m-lg-4 nav-bar fs-2" fixed="top">
             <Nav className="me-auto">
                 <Link
                     href="#about"
-                    className="px-lg-4"
+                    className="px-4"
                     activeClass="active-nav"
                     smooth
                     spy
@@ -18,7 +18,7 @@ export const NavBar = () => {
                 </Link>
                 <Link
                     href="#projects"
-                    className="px-lg-4"
+                    className="px-4"
                     activeClass="active-nav"
                     smooth
                     spy
@@ -29,7 +29,7 @@ export const NavBar = () => {
                 </Link>
                 <Link
                     href="#contacts"
-                    className="px-lg-4"
+                    className="px-4"
                     activeClass="active-nav"
                     smooth
                     spy

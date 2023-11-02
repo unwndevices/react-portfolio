@@ -1,34 +1,29 @@
-.project {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow: auto;
-}
-
-.project-container {
-    display: flex; /* Use flex layout for the project container */
-    align-items: flex-start;
-    margin: 0.5rem;
-}
-
-.image-wrapper {
-    flex: 0 0 auto;
-    margin: 0.5rem;
+.content-wrapper {
+    overflow-x: auto;
 }
 
 .project-title {
     min-width: 20rem;
 }
 
+.image-wrapper {
+    flex: 0 0 auto;
+    margin: 0.5rem;
+    display: flex;
+    align-items: flex-start;
+}
+
 /* Limit the height of images */
 .image-wrapper img {
-    max-height: 500px; /* Adjust the height as needed */
+    max-height: 700px; /* Adjust the height as needed */
 }
 
 .description-wrapper {
     flex: 1; /* Allow the description to take up the remaining space */
+    white-space: wrap;
     padding-left: 0.5rem;
     padding-bottom: 1rem;
     margin-left: 0.2rem; /* Add spacing between the image and description */
-    min-width: 20rem;
+    width: 20rem;
     border-left: 2px solid #eff1f3;
 }

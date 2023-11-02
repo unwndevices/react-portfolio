@@ -11,7 +11,7 @@ import { ContactForm } from './components/ContactForm'
 
 function App() {
     return (
-        <Container fluid className="app-gradient-bg">
+        <Container className="app-gradient-bg">
             <NavBar />
             <Intro />
             <Row className=" justify-content-center m-5" id="about">
@@ -25,9 +25,7 @@ function App() {
             </Row>
             <Row className="justify-content-center m-5" id="projects">
                 <h2 className="section-title mb-5">projects</h2>
-                <Col className="col-sm-12">
-                    <Projects />
-                </Col>
+                <Projects />
             </Row>
             <Row className="m-5" id="contacts">
                 <h2 className="section-title mb-5">get-in-touch</h2>
